@@ -70,5 +70,9 @@ def get_status():
         status_copy = dict(device_status)
     return jsonify({'status': status_copy})
 
+@app.route('/api/data', methods=['GET'])
+def get_data():
+    return {"data": "sample data"}
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
